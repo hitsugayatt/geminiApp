@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 app.use(express.json());
+
+app.use(cors());
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const genAI = new GoogleGenerativeAI('AIzaSyCWvBXfze93N7Gz1mBN2KZ1VPlmQEiU7LI');
